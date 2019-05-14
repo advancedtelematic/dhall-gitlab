@@ -1,14 +1,8 @@
 DOCKER_RUN := \
-	docker run -i --rm -v ${CURDIR}:/data --entrypoint=dhall-to-yaml advancedtelematic/dhall-json --key mk --value mv --omitNull --explain
+	docker run -i --rm --entrypoint=dhall-to-yaml -v $(CURDIR):/data --workdir /data advancedtelematic/dhall --omitNull
 
-print-yaml:
-	cat ./pipelines.dhall | $(DOCKER_RUN) | tr -d '\r'
-
-generate-yaml:
-	cat ./pipelines.dhall | $(DOCKER_RUN) | tr -d '\r' > pipelines.gocd.yaml
-
-docker-run:
-	docker run -it --rm -v ${CURDIR}:/data advancedtelematic/dhall bash
+print-auditor:
+	cat ./auditor.dhall | $(DOCKER_RUN)
 
 create-config-toml:
 	@cp runner-config.toml.example runner-config.toml

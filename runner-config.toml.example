@@ -1,0 +1,6 @@
+concurrent = 4
+check_interval = 0
+log_level = "warning"
+
+[session_server]
+  session_timeout = 172800

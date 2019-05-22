@@ -1,6 +1,14 @@
 # dhall-gitlab
 
-Dhall types for configuring gitlab-ci jobs
+_Alpha quality, still experimental_
+
+This repository provides [Dhall](https://dhall-lang.org) types for configuring [gitlab-ci](https://docs.gitlab.com/ee/ci/yaml/) jobs
+
+## Getting started
+
+Find the types in the `types` directory.
+
+TODO: Add `defaults` dir.
 
 ## Running locally
 

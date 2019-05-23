@@ -18,6 +18,6 @@
 , tags : Optional (List Text)
 , trigger : ./Trigger.dhall
 , variables :
-    List { mapKey : Text, mapValue : Text}
+    Optional (List { mapKey : Text, mapValue : Text})
 , when : Optional ./When.dhall
 }

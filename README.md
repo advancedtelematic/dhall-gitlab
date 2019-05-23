@@ -8,7 +8,16 @@ This repository provides [Dhall](https://dhall-lang.org) types for configuring [
 
 Find the types in the `types` directory.
 
-TODO: Add `defaults` dir.
+Play around in the reply making jobs like so:
+
+```haskell
+$ dhall repl
+⊢ :let types = ./types.dhall  -- Import all types as a giant record
+
+⊢ :let defaults = ./defaults.dhall  -- Import all defaults as a giant record
+
+⊢ defaults.Job /\ { script = types.Script.Command "make build" } : types.Job
+```
 
 ## Running locally
 

@@ -6,17 +6,17 @@
 , coverage : Optional Text
 , dependencies : Optional (List Text)
 , environment : Optional ./Environment.dhall -- TODO complicated
-, except : List Text -- TODO complicated
+, except : Optional (List Text) -- TODO complicated
 , extends : Optional Text
 , include : Optional (List ./Include.dhall)
-, only : List Text -- TODO complicated
+, only : Optional (List Text) -- TODO complicated
 , parallel : Optional Natural
 , retry : Optional ./Retry.dhall
 , script : ./Script.dhall
-, services : List ./Service.dhall
-, stage : Text
+, services : Optional (List ./Service.dhall)
+, stage : Optional Text
 , tags : Optional (List Text)
-, trigger : ./Trigger.dhall
+, trigger : Optional ./Trigger.dhall
 , variables :
     Optional (List { mapKey : Text, mapValue : Text})
 , when : Optional ./When.dhall
